@@ -1,9 +1,17 @@
-<section>
+<section class="flex flex-col align-middle justify-center p-1 m-1">
+  <h1 class="text-xl font-medium p-1">Pipes</h1>
   <div>
-    <label>Payee Name</label>
-    <input (input)="onNameChange($event)">
+    <label class="p-1">Payee Name</label>
+    <input class="p-1 border-black border" (input)="onNameChange($event)">
+  </div>
+  <div class="p-1">
+    Name: {{ name | titlecase }}
   </div>
   <div>
-  Name : {{ name | titlecase }}
+    <label class="p-1">Payment Date</label>
+    <input class="p-1 border-black border" type="date" (input)="onDateChange($event)">
+  </div>
+  <div class="p-1">
+    Payment Date: {{ date | date:'fullDate' }}
   </div>
 </section>
