@@ -8,7 +8,7 @@ export class ConvertPipe implements PipeTransform {
 
   transform(value: number, targetUnits: string): any {
     if (!value) return 0 
-
+    console.log("miles: ", value)
     switch (targetUnits) {
       case 'km':
         return value * 1.60934;

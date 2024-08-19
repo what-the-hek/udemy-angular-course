@@ -35,8 +35,10 @@
     <label class="p-1 font-medium">Miles</label>
     <input class="p-1 border-black border" type="number" (input)="onMilesChange($event)">
   </div>
+  @if (miles > 10 ) {
   <div class="p-1">
-    Kilometers: {{ miles | convert:'km' }}
+    Kilometers: {{ miles | convert:'km' | number:'1.0-3'}}
     <!-- you can separate multiple custom pipe arguments with : -->
   </div>
+  }
 </section>
