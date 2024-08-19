@@ -31,4 +31,11 @@
   <div class="p-1">
     Car json: {{ car | json }}
   </div>
+  <div>
+    <label class="p-1 font-medium">Miles</label>
+    <input class="p-1 border-black border" type="number" (input)="onMilesChange($event)">
+  </div>
+  <div class="p-1">
+    Kilometers: {{ miles | convert }}
+  </div>
 </section>
