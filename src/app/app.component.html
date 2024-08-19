@@ -14,4 +14,11 @@
   <div class="p-1">
     Payment Date: {{ date | date:'fullDate' }}
   </div>
+  <div>
+    <label class="p-1">Amount</label>
+    <input class="p-1 border-black border" type="number" (input)="onAmountChange($event)">
+  </div>
+  <div class="p-1">
+    Amount: {{ amount | currency }}
+  </div>
 </section>
