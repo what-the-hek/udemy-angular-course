@@ -1,31 +1,34 @@
 <section class="flex flex-col align-middle justify-center p-1 m-1">
   <h1 class="text-xl font-medium p-1">Pipes</h1>
   <div>
-    <label class="p-1">Payee Name</label>
+    <label class="p-1 font-medium">Payee Name</label>
     <input class="p-1 border-black border" (input)="onNameChange($event)">
   </div>
   <div class="p-1">
     Name: {{ name | titlecase }}
   </div>
   <div>
-    <label class="p-1">Payment Date</label>
+    <label class="p-1 font-medium">Payment Date</label>
     <input class="p-1 border-black border" type="date" (input)="onDateChange($event)">
   </div>
   <div class="p-1">
     Payment Date: {{ date | date:'fullDate' }}
   </div>
   <div>
-    <label class="p-1">Payment Amount</label>
+    <label class="p-1 font-medium">Payment Amount</label>
     <input class="p-1 border-black border" type="number" (input)="onAmountChange($event)">
   </div>
   <div class="p-1">
     Payment Amount: {{ amount | currency }}
   </div>
   <div>
-    <label class="p-1">Height</label>
+    <label class="p-1 font-medium">Height</label>
     <input class="p-1 border-black border" type="number" (input)="onHeightChange($event)">
   </div>
   <div class="p-1">
     Height: {{ height | number:'1.1-3'}}cm
+  </div>
+  <div class="p-1">
+    Car json: {{ car | json }}
   </div>
 </section>
