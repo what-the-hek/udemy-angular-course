@@ -15,10 +15,17 @@
     Payment Date: {{ date | date:'fullDate' }}
   </div>
   <div>
-    <label class="p-1">Amount</label>
+    <label class="p-1">Payment Amount</label>
     <input class="p-1 border-black border" type="number" (input)="onAmountChange($event)">
   </div>
   <div class="p-1">
-    Amount: {{ amount | currency }}
+    Payment Amount: {{ amount | currency }}
+  </div>
+  <div>
+    <label class="p-1">Height</label>
+    <input class="p-1 border-black border" type="number" (input)="onHeightChange($event)">
+  </div>
+  <div class="p-1">
+    Height: {{ height | number:'1.1-3'}}cm
   </div>
 </section>
