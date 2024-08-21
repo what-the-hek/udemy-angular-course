@@ -9,6 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  
+  currentPage = 0;
+
   images = [
     {
       title: 'At the beach',
