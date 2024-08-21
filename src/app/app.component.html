@@ -10,7 +10,11 @@
     <li 
     class="page-item"
     [ngClass]="{active : i === currentPage}">
-      <a class="page-link">{{ i + 1 }}</a>
+      <a 
+      class="page-link"
+      (click)="currentPage = i">
+        {{ i + 1 }}
+    </a>
     </li>
     }
     <li 
