@@ -1,10 +1,11 @@
 import { NgClass, CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ClassDirective } from './class.directive';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgClass, CommonModule],
+  imports: [RouterOutlet, NgClass, CommonModule, ClassDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
