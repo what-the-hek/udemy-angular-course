@@ -46,5 +46,9 @@ export class AppComponent {
       title: 'At the jungle',
       url: 'https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8anVuZ2xlfGVufDB8fDB8fHww',
     },
-  ]
+  ];
+
+  checkWindowIndex(index: number) {
+   return Math.abs(this.currentPage - index) < 5; 
+  }
 }
