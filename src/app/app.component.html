@@ -8,15 +8,17 @@
       <a class="page-link">Prev</a>
     </li>
     @for (image of images; track image; let i = $index;) {
-    <li 
-    class="page-item"
-    [ngClass]="{active : i === currentPage}">
-      <a 
-      class="page-link"
-      (click)="currentPage = i">
-        {{ i + 1 }}
-    </a>
-    </li>
+      @if (i < 5) {
+        <li 
+        class="page-item"
+        [ngClass]="{active : i === currentPage}">
+          <a 
+          class="page-link"
+          (click)="currentPage = i">
+            {{ i + 1 }}
+        </a>
+        </li>
+      }
     }
     <li 
     class="page-item"
@@ -27,5 +29,8 @@
   </ul>
 </nav>
 <section>
-
+  <div>
+    <h4>{{ images[currentPage].title }}</h4>
+    <img [src]="images[currentPage].url"/>
+    </div>
 </section>
